@@ -47,7 +47,7 @@ jobs:
       run: |
         cd /opt/rt-n56u/trunk
         # 替换logo
-        sh change_logo.sh $TNAME
+        # sh change_logo.sh $TNAME
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
         exit 1
@@ -93,7 +93,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #锐捷认证
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=n" >> .config #wireguard ~10k.
         ##网络云盘##
-        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=y" >> .config  #阿里云盘  ~3m
+        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config  #阿里云盘  ~3m
         ##流控QOS##
         echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config #SQM QOS#CPU超频
         echo "CONFIG_FIRMWARE_INCLUDE_OC=n" >> .config #CPU超频开关
